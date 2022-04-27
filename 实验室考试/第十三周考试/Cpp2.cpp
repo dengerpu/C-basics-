@@ -1,0 +1,90 @@
+/*2问题描述
+所谓"螺旋方阵"，是指对任意给定的N，将1到N*N的数字从左上角第一个格子开始，按顺时针螺旋方向顺序填入N*N的方阵里，本题要求构造这样的螺旋方阵。
+输入格式：
+输入一行中给出的一个正整数N（N<10）
+
+  输出格式：
+  输出N*N的螺旋方阵，每行N个数字，每个数字占3位。
+*/
+#include<stdio.h>
+void main()
+{
+	int i,j,n,k,m,a,b,s[10][10];
+	scanf("%d",&n);
+	k=n*n;
+	if(n%2==0)
+	{a=n/2;b=n/2;}
+	else
+	{a=n/2+1;b=n/2+1;}
+	s[a][b]=k--;
+	for(i=1;i<=n;i++)
+	{
+		if(i%2!=0)
+		{
+			for(m=1;m<=i;m++)
+			{b--;s[a][b]=k--;}
+			for(m=1;m<=i;m++)
+			{a++;s[a][b]=k--;}
+			
+		}
+		else
+		{
+			for(m=1;m<=i;m++)
+			{b++;s[a][b]=k--;}	
+			for(m=1;m<=i;m++)
+			{a--;s[a][b]=k--;}
+		}		
+	}
+	for(i=1;i<=n;i++)
+	{
+		for(j=1;j<=n;j++)
+			printf("%3d ",s[i][j]);
+		printf("\n");
+	}	
+}
+/*
+#include<stdio.h>
+void main()
+{
+int n,i,j,k=1,m,a,b,s[10][10];
+scanf("%d",&n);
+for(j=1;j<=n;j++)
+s[1][j]=k++;
+a=1;b=j;
+for(i=n-1;i>=1;i--)
+{
+if(i%2==0)
+{
+for(m=0;m<=i;m++)
+{
+a++;
+s[a][b]=k++;
+}
+for(m=0;m<=i;m++)
+{
+b--;
+s[a][b]=k++;
+}
+}
+else
+{
+for(m=0;m<=i;m++)
+{
+a--;
+s[a][b]=k++;
+}
+for(m=0;m<=i;m++)
+{
+b++;
+s[a][b]=k++;
+}
+}
+}
+for(i=1;i<=n;i++)
+{
+for(j=1;j<=n;j++)
+printf("%3d ",s[i][j]);
+printf("\n");
+}	
+}
+*/

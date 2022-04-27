@@ -1,0 +1,32 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: cpp3 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\ADMINI~1.SC-\AppData\Local\Temp\RSP9825.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/cpp3.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Users\Administrator.SC-201902031211\Desktop\c\实验室考试\第八周考试\新建文件夹\cpp3.cpp"
+]
+Creating command line "cl.exe @"C:\Users\ADMINI~1.SC-\AppData\Local\Temp\RSP9825.tmp"" 
+Creating temporary file "C:\Users\ADMINI~1.SC-\AppData\Local\Temp\RSP9826.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/cpp3.pdb" /debug /machine:I386 /out:"Debug/cpp3.exe" /pdbtype:sept 
+".\Debug\cpp3.obj"
+]
+Creating command line "link.exe @"C:\Users\ADMINI~1.SC-\AppData\Local\Temp\RSP9826.tmp""
+<h3>Output Window</h3>
+Compiling...
+cpp3.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+cpp3.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

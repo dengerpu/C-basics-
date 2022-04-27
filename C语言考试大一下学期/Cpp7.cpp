@@ -1,0 +1,39 @@
+/*7、编写函数：移动字符串中的内容，移动规则：把1到第m个字符，平移到字符串的最后，把第m+1到最后的字符移到字符串的前部。
+输入数据：sidamingbu
+4
+输出数据：mingbusida
+*/
+#include <stdio.h>
+#include <string.h>
+#define N 80
+void fun1(char *w)
+{
+	int i=0;
+	char ch=w[0];
+	for(i=0;i<strlen(w)-1;i++)
+	{
+		w[i]=w[i+1];
+	}
+	w[strlen(w)-1]=ch;
+}
+void fun(char *w,int m)
+{
+	int i;
+	for(i=1;i<=m;i++)
+		fun1(w);
+}
+int main()
+{
+    char a[N];
+	int m;
+    gets(a);
+	printf("the original string:\n");
+	puts(a);
+	printf("\nenter m:");
+	scanf("%d",&m);
+	fun(a,m);
+	printf("\nthe string after moving:\n");
+	puts(a);
+    printf("\n"); 
+	return 0;
+}
